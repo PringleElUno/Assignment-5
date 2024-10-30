@@ -41,17 +41,14 @@ def final_result(num1: int, num2: int):
     :return: string representation of the multiplication process
     """
     if num2 == 1:
-        print(num1)
+        return str(num1)
     else:
-        print(num1, "+ (", num1)
-        final_result(num1, num2 -1)
-        print(")")
+        return str(num1) + " + (" + final_result(num1,num2 - 1) + ")"
 
 # Main function for displaying the arithmetic
 def main(num1: int, num2: int):
     print_multiplication(num1, num2)
-    result = multiply(num1, num2)
-    print ("So, ", num1, "*", num2, "=")
-    final_result(num1, num2)
+    result_expression = final_result(num1, num2)
+    print("So,", num1, "*", num2, "*", result_expression)
 
 main(7,4)
