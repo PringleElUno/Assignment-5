@@ -49,6 +49,6 @@ def final_result(num1: int, num2: int):
 def main(num1: int, num2: int):
     print_multiplication(num1, num2)
     result_expression = final_result(num1, num2)
-    print("So,", num1, "*", num2, "*", result_expression)
+    print("So,", num1, "*", num2, "=", result_expression)
 
 main(7,4)
