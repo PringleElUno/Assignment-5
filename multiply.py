@@ -12,15 +12,15 @@ def multiply(num1: int, num2: int):
     :return: product of num1 and num2
     """
     if num2 == 1:
-        print(str(num1) + " * " + str(num2) + " = "+ str(num1))
+        print(str(num1) + " * " + str(num2) + " = " + str(num1))
         return num1 # This is the base case, return num1 as string
     else:
         # Creating the recursive case to build the string expression
-        print(str(num1) + " * " + str(num2) + " = " + str(num1) + " * " + str(num2 - 1) + ")")
+        print(str(num1) + " * " + str(num2) + " = " + str(num1) + " + (" + str(num1) + " * " + str(num2 - 1) +")")
         return num1 + multiply(num1, num2 -1)
 
 def main(num1: int, num2: int):
-    result = multiply(num1, num2)
+    multiply(num1, num2)
     result_expression = build_result_expression(num1, num2)
     print("So, " + str(num1) + " * " + str(num2) + " = " + result_expression)
 
