@@ -19,4 +19,3 @@ def multiply(num1: int, num2: int):
         # Creating the recursive case to build the string expression
         print(str(num1) + " * " + str(num2) + " = " + str(num1) + " + (" + str(num1) + " * " + str(num2 - 1) +")")
         return num1 + multiply(num1, num2 -1)
-
